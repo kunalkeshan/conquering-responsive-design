@@ -1,0 +1,67 @@
+/* importing font style */
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+/* font-family: 'Roboto', sans-serif; */
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html{
+    transition: font-size .4s;
+}
+.container{
+    width: 100%;
+    background-color: #23424A;
+    padding: 5em;
+}
+
+.div__container{
+    width: 80%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.container__heading{
+    font-size: 2.1rem;
+    margin-bottom: .5em;
+}
+
+.container__text{
+    width: 70%;
+}
+.container__para{
+    margin-bottom: 2em;
+}
+
+.container__link{
+    font-weight: 600;
+}
+
+.container__para, 
+.container__link {
+    font-size: 1.3rem
+}
+.container--white-text{
+    color: #fff;
+}
+.container__link{
+    text-decoration: none;
+    color: #000;
+    background-color: #38CFD9;
+    border-radius: 30px;
+    padding: .5em 1em;
+}
+
+.container__link:hover,
+.container__link:focus{
+    opacity: 0.7;
+}
+@media (max-width: 680px){
+    html{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,157 @@
+html{
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+:root{
+    --color-accent-light: #f3eed9;
+    --color-accent-dark: #222c2a;
+    --color-accent-brown: #824936;
+    --color-accent-neutral: #fff;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    object-fit: contain;
+}
+
+/* General styling, reusable classes and modifiers*/
+
+.container{
+    width: 80%;
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.container--flex{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+
+.section__title{
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+.section__subtitle{
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.section--font-color-accent{
+    color: var(--color-accent-brown);
+}
+
+.section--font-color-accent-light{
+    color: var(--color-accent-light);
+}
+
+.template--background-dark{
+    background: var(--color-accent-dark);
+}
+
+.template--background-accent{
+    background: var(--color-accent-brown);
+}
+
+.font-default{
+    color: var(--color-accent-neutral);
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* Header Styling */
+
+.header{
+    background: var(--color-accent-light);
+    text-align: center;
+    padding: 5em;
+}
+
+.header__title{
+    color: var(--color-accent-brown);
+    font-size: 3.75rem;
+    width: 65%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header__subtitle{
+    color: var(--color-accent-dark);
+    font-size: 1.125rem;
+    font-weight: lighter;
+}
+
+/* Text section styling */
+
+.text{
+    background: var(--color-accent-neutral);
+    padding: 5em;
+}
+
+.section__information{
+    width: 100%;
+}
+
+.section__subtitle + .section__subtitle{
+    margin-left: 2em;
+}
+
+/* Templates section styling */
+
+.template{
+    padding: 5em;
+}
+
+.col + .col{
+    margin-left: 2em;
+}
+
+.template__image{
+    width: 100%;
+    height: 100%;
+}
+
+.template__image img{
+    width: 100%;
+    height: 100%;
+}
+
+/* responsive */
+
+@media (max-width: 700px){
+    html{
+        font-size: 14px;
+    }
+
+    .container--flex{
+        flex-flow: column;
+    }
+
+    .col+.col{
+        margin: 3em 0;
+    }
+
+    .section__subtitle + .section__subtitle{
+        margin: 3em 0;
+    }
+
+    .header__title{
+        width: 100%;
+    }
+
+    .container-flex-direction{
+        flex-direction: column-reverse;
+    }
+}
+

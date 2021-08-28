@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-primary-300: #f3ddd9;
+  --clr-primary-400: #824936;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #222c2a;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-accent: "Playfair Display", serif;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+.text-center {
+  text-align: center;
+}
+
+section,
+header {
+  padding: 3rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 40em) {
+  section,
+  header {
+    padding: 7rem 0;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+  .split > * {
+    flex-basis: 100%;
+  }
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.container--narrow {
+  max-width: 30rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  font-family: var(--ff-accent);
+  font-weight: 900;
+  margin-bottom: 1em;
+  color: var(--clr-primary-400);
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.bg-light {
+  background-color: var(--clr-primary-300);
+}
+.bg-primary {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+.bg-dark {
+  background-color: var(--clr-neutral-900);
+}
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-300);
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+}
+
+.list__item{
+    margin: 1.25em;
+    padding: .35em .75em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border: solid 1px #fff;
+    backdrop-filter: blur(17px);
+    transition: all 500ms;
+    cursor: pointer;
+}
+
+.list__item:hover{
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.list__link {
+  color: var(--clr-neutral-900);
+  transition: all 500ms;
+}
